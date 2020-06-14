@@ -9,5 +9,3 @@ m2w64_c_compiler:
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
-vc:
-- '14'
