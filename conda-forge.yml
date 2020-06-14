@@ -2,7 +2,6 @@ github:
   user_or_org: tudat-team
 
 channels:
-  sources: [tudat-team, conda-forge, defaults]
   targets:
     - [tudat-team, main]
 
