@@ -6,7 +6,7 @@ cd build
 
 cmake \
     -DCMAKE_CXX_STANDARD=17 \
-    -DCMAKE_CXX_FLAGS="${CMAKE_CXX_FLAGS} -v" \
+    -DCMAKE_CXX_FLAGS="${CMAKE_CXX_FLAGS} -v -stdlib=libstdc++ -lstdc++" \
     -DCMAKE_BUILD_TYPE=Debug \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
