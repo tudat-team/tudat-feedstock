@@ -7,7 +7,7 @@ Package license: BSD
 
 Feedstock license: BSD-3-Clause
 
-Summary: Tudat Bundle packs Tudat and external libraries in a modular fashion
+Summary: A C++ platform to perform astrodynamics and space research
 
 
 
