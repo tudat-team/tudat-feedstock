@@ -4,7 +4,7 @@ package:
 
 source:
   git_url: https://github.com/tudat-team/tudat.git
-  git_rev: fb0495c2454ef9d9c3d0ed9edbb0822f18e9147b
+  git_rev: 90551cba75b44220f68c74fa06bfb22e2bceb7ea
 
 build:
   # A non-negative integer representing the build number of the package.
@@ -24,12 +24,14 @@ requirements:
     # or native when not cross-compiling), and any source pre-processors.
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('c') }}              # [not win]
-    - vs2017_{{ target_platform  }}    # [win]
+    - {{ compiler('m2w64_c') }}        # [win]
     - cmake
 
 outputs:
   - name: tudat
     build:
+      ignore_run_exports:
+        - m2w64-gcc-libs  # [win]
       run_exports:
         - cspice-cmake
         - sofa-cmake

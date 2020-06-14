@@ -3,7 +3,7 @@ if errorlevel 1 exit 1
 cd build
 if errorlevel 1 exit 1
 cmake ^
-    -G "Visual Studio 15 2017 Win64" ^
+    -G "MinGW Makefiles" ^
     -DCMAKE_CXX_STANDARD=17 ^
     -DCMAKE_BUILD_TYPE=Release ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
