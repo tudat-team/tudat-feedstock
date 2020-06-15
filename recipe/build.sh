@@ -19,6 +19,6 @@ cmake \
     -DTUDAT_TEST_INSTALL=off \
     ..
 
-make
+make -j2
 
 make install
