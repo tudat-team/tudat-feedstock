@@ -11,7 +11,13 @@ environment:
     secure: vWktDJSW9Rh2frmNkzdUHF2n4WzalOoKudWGdBLo6jcC/suzU+fViO/3/TxLOnmW
 
   matrix:
-    - CONFIG: win_
+    - CONFIG: win_boost_cpp1.64.0
+      CONDA_INSTALL_LOCN: C:\Miniconda36-x64
+
+    - CONFIG: win_boost_cpp1.65.0
+      CONDA_INSTALL_LOCN: C:\Miniconda36-x64
+
+    - CONFIG: win_boost_cpp1.66.0
       CONDA_INSTALL_LOCN: C:\Miniconda36-x64
 
 
@@ -50,5 +56,4 @@ test_script:
     - cmd: conda.exe build recipe -m .ci_support\%CONFIG%.yaml
 deploy_script:
     - set "GIT_BRANCH=%APPVEYOR_REPO_BRANCH%"
-    - set "FEEDSTOCK_NAME=%APPVEYOR_REPO_NAME:*/=%"
     - cmd: upload_package  .\ .\recipe .ci_support\%CONFIG%.yaml
