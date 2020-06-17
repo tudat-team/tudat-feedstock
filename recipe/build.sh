@@ -19,7 +19,7 @@ cmake \
     -DTUDAT_TEST_INSTALL=off \
     ..
 
-make VERBOSE=1 -j2
+make -j2
 
 ctest
 
