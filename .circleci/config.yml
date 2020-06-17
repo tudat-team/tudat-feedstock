@@ -24,11 +24,11 @@ jobs:
           command: |
             export CI=circle
             ./.scripts/run_docker_build.sh
-  build_linux_boost_cpp1.65.0:
+  build_linux_boost_cpp1.67.0:
     working_directory: ~/test
     machine: true
     environment:
-      - CONFIG: "linux_boost_cpp1.65.0"
+      - CONFIG: "linux_boost_cpp1.67.0"
       - UPLOAD_PACKAGES: "True"
         DOCKER_IMAGE: "condaforge/linux-anvil-comp7"
     steps:
@@ -43,11 +43,49 @@ jobs:
           command: |
             export CI=circle
             ./.scripts/run_docker_build.sh
-  build_linux_boost_cpp1.66.0:
+  build_linux_boost_cpp1.68.0:
     working_directory: ~/test
     machine: true
     environment:
-      - CONFIG: "linux_boost_cpp1.66.0"
+      - CONFIG: "linux_boost_cpp1.68.0"
+      - UPLOAD_PACKAGES: "True"
+        DOCKER_IMAGE: "condaforge/linux-anvil-comp7"
+    steps:
+      - checkout
+      - run:
+          name: Fast finish outdated PRs and merge PRs
+          command: |
+            ./.circleci/fast_finish_ci_pr_build.sh
+            ./.circleci/checkout_merge_commit.sh
+      - run:
+          # Run, test and (if we have a BINSTAR_TOKEN) upload the distributions.
+          command: |
+            export CI=circle
+            ./.scripts/run_docker_build.sh
+  build_linux_boost_cpp1.69.0:
+    working_directory: ~/test
+    machine: true
+    environment:
+      - CONFIG: "linux_boost_cpp1.69.0"
+      - UPLOAD_PACKAGES: "True"
+        DOCKER_IMAGE: "condaforge/linux-anvil-comp7"
+    steps:
+      - checkout
+      - run:
+          name: Fast finish outdated PRs and merge PRs
+          command: |
+            ./.circleci/fast_finish_ci_pr_build.sh
+            ./.circleci/checkout_merge_commit.sh
+      - run:
+          # Run, test and (if we have a BINSTAR_TOKEN) upload the distributions.
+          command: |
+            export CI=circle
+            ./.scripts/run_docker_build.sh
+  build_linux_boost_cpp1.70.0:
+    working_directory: ~/test
+    machine: true
+    environment:
+      - CONFIG: "linux_boost_cpp1.70.0"
       - UPLOAD_PACKAGES: "True"
         DOCKER_IMAGE: "condaforge/linux-anvil-comp7"
     steps:
@@ -68,5 +106,7 @@ workflows:
   build_and_test:
     jobs:
       - build_linux_boost_cpp1.64.0
-      - build_linux_boost_cpp1.65.0
-      - build_linux_boost_cpp1.66.0
+      - build_linux_boost_cpp1.67.0
+      - build_linux_boost_cpp1.68.0
+      - build_linux_boost_cpp1.69.0
+      - build_linux_boost_cpp1.70.0

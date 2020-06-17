@@ -1,13 +1,19 @@
 boost_cpp:
-- 1.66.0
+- 1.67.0
+c_compiler:
+- gcc
+c_compiler_version:
+- '7'
 channel_sources:
 - tudat-team, conda-forge, defaults
 channel_targets:
 - tudat-team main
-m2w64_c_compiler:
-- m2w64-toolchain
+cxx_compiler:
+- gxx
+cxx_compiler_version:
+- '7'
+docker_image:
+- condaforge/linux-anvil-comp7
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
-vc:
-- '14'
