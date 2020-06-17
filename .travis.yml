@@ -11,19 +11,7 @@ matrix:
       os: osx
       osx_image: xcode9.4
 
-    - env: CONFIG=osx_boost_cpp1.67.0 UPLOAD_PACKAGES=True PLATFORM=osx-64
-      os: osx
-      osx_image: xcode9.4
-
     - env: CONFIG=osx_boost_cpp1.68.0 UPLOAD_PACKAGES=True PLATFORM=osx-64
-      os: osx
-      osx_image: xcode9.4
-
-    - env: CONFIG=osx_boost_cpp1.69.0 UPLOAD_PACKAGES=True PLATFORM=osx-64
-      os: osx
-      osx_image: xcode9.4
-
-    - env: CONFIG=osx_boost_cpp1.70.0 UPLOAD_PACKAGES=True PLATFORM=osx-64
       os: osx
       osx_image: xcode9.4
 
