@@ -5,7 +5,7 @@ mkdir build
 cd build
 
 cmake \
-    -DCMAKE_CXX_STANDARD=17 \
+    -DCMAKE_CXX_STANDARD=14 \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
@@ -21,6 +21,6 @@ cmake \
 
 make -j2
 
-ctest
+ctest --verbose
 
 make install

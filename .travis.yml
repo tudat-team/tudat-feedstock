@@ -7,11 +7,7 @@ language: generic
 
 matrix:
   include:
-    - env: CONFIG=osx_boost_cpp1.64.0 UPLOAD_PACKAGES=True PLATFORM=osx-64
-      os: osx
-      osx_image: xcode9.4
-
-    - env: CONFIG=osx_boost_cpp1.68.0 UPLOAD_PACKAGES=True PLATFORM=osx-64
+    - env: CONFIG=osx_ UPLOAD_PACKAGES=True PLATFORM=osx-64
       os: osx
       osx_image: xcode9.4
 
