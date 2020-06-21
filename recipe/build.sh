@@ -21,6 +21,6 @@ cmake \
 
 make -j2
 
-ctest --verbose
+#ctest --verbose
 
 make install
