@@ -1,10 +1,10 @@
 package:
   name:  tudat
-  version: 2.8.24
+  version: 2.8.25
 
 source:
   git_url: https://github.com/tudat-team/tudat.git
-  git_rev: 43ec3c55338e6a2d266d4161b1dfb02bd031bbff
+  git_rev: e69c51bd3051e9608f482650b455bfba9a677a27
 
 build:
   # A non-negative integer representing the build number of the package.
