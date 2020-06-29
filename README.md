@@ -7,7 +7,7 @@ Package license: BSD
 
 Feedstock license: BSD 3-Clause
 
-Summary: A C++ platform to perform astrodynamics and space research
+Summary: A C++ platform to perform astrodynamics and space research.
 
 
 
@@ -100,4 +100,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@ggarrett13](https://github.com/ggarrett13/)
 
