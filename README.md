@@ -5,7 +5,7 @@ Home: http://tudat.tudelft.nl/
 
 Package license: BSD
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A C++ platform to perform astrodynamics and space research.
 
@@ -28,18 +28,6 @@ Current build status
       <a href="https://travis-ci.com/tudat-team/tudat-feedstock">
         <img alt="macOS" src="https://img.shields.io/travis/com/tudat-team/tudat-feedstock/master.svg?label=macOS">
       </a>
-    </td>
-  </tr>
-  <tr>
-    <td>Windows</td>
-    <td>
-      <img src="https://img.shields.io/badge/Windows-disabled-lightgrey.svg" alt="Windows disabled">
-    </td>
-  </tr>
-  <tr>
-    <td>Linux_ppc64le</td>
-    <td>
-      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
     </td>
   </tr>
 </table>

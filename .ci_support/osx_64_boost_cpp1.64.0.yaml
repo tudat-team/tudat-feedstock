@@ -5,7 +5,7 @@ boost_cpp:
 c_compiler:
 - clang
 c_compiler_version:
-- '9'
+- '10'
 channel_sources:
 - tudat-team, conda-forge, defaults
 channel_targets:
@@ -13,7 +13,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '9'
+- '10'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 macos_min_version:
@@ -21,3 +21,5 @@ macos_min_version:
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
+target_platform:
+- osx-64
