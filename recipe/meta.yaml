@@ -1,5 +1,5 @@
 {% set name = "tudat" %}
-{% set version = "2.8.26" %}
+  {% set version = "2.8.26" %}
 
 package:
   name: {{ name }}
@@ -16,7 +16,10 @@ build:
   #  and versions to determine the latest one. This is important because
   #  new builds that contain bug fixes for the way a package is built may be
   #  added to a repository.
-  number: 2
+  number: 3
+  ignore_run_exports:
+    - m2w64-gcc-libs  # [win]
+
 
 requirements:
   build:
@@ -26,7 +29,8 @@ requirements:
     # or native when not cross-compiling), and any source pre-processors.
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('c') }}              # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ compiler('m2w64_c') }}         # [win]
+    - m2w64-toolchain                   # [win]
     - cmake
 
 outputs:
