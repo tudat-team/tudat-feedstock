@@ -9,7 +9,5 @@ boost_cpp:
   - 1.67.0
   - 1.68.0
   - 1.69.0
-c_compiler_version:   # [macOS]
-  - '9'               # [macOS]
-cxx_compiler_version: # [macOS]
-  - '9'               # [macOS]
+  - 1.70.0
+channel_priority: strict
