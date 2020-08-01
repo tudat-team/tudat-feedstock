@@ -19,7 +19,8 @@ build:
   number: 3
   ignore_run_exports:
     - m2w64-gcc-libs  # [win]
-
+    - vs2015_runtime  # [win]
+    - vs2008_runtime  # [win]
 
 requirements:
   build:
