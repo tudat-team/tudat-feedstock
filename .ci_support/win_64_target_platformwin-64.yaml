@@ -1,13 +1,9 @@
 boost_cpp:
 - 1.67.0
-c_compiler:
-- vs2017
 channel_sources:
 - tudat-team, conda-forge
 channel_targets:
 - tudat-team main
-cxx_compiler:
-- vs2017
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
