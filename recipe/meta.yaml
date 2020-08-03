@@ -26,8 +26,7 @@ requirements:
     # or native when not cross-compiling), and any source pre-processors.
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('c') }}              # [not win]
-    - clang      # [win]
-    - ninja      # [win]
+    - vs2017_{{ target_platform  }}    # [win]
     - cmake
 
 outputs:
