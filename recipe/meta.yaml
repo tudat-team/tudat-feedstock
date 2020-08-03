@@ -17,10 +17,10 @@ build:
   #  new builds that contain bug fixes for the way a package is built may be
   #  added to a repository.
   number: 3
-  ignore_run_exports:
-    - m2w64-gcc-libs  # [win]
-    - vs2015_runtime  # [win]
-    - vs2008_runtime  # [win]
+  #  ignore_run_exports:
+  #    - m2w64-gcc-libs  # [win]
+  #    - vs2015_runtime  # [win]
+  #    - vs2008_runtime  # [win]
 
 requirements:
   build:
@@ -30,15 +30,16 @@ requirements:
     # or native when not cross-compiling), and any source pre-processors.
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('c') }}              # [not win]
-    - {{ compiler('m2w64_c') }}         # [win]
-    - m2w64-toolchain                   # [win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - m2w64-toolchain                  # [win]
+    - vs2017_{{ target_platform  }}    # [win]
     - cmake
 
 outputs:
   - name: {{ name }}
     build:
-      ignore_run_exports:
-        - m2w64-gcc-libs  # [win]
+      #      ignore_run_exports:
+      #        - m2w64-gcc-libs  # [win]
       run_exports:
         - tudat-resources
         - cspice-cmake
