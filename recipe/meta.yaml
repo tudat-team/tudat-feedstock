@@ -59,6 +59,7 @@ outputs:
         - boost-cpp
         - cspice-cmake
         - sofa-cmake
+        - nlohmann_json
         - eigen
       run:
         # Packages required to run the package. These are the dependencies
