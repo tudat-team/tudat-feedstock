@@ -17,7 +17,7 @@ cmake ^
     -DTUDAT_BUILD_WITH_SPICE_INTERFACE=on ^
     ..
 if errorlevel 1 exit 1
-cmake --build . --config RelWithDebInfo --target install
+cmake --build . --config RelWithDebInfo --target install -- -j4
 if errorlevel 1 exit 1
 ctest
 if errorlevel 1 exit 1
