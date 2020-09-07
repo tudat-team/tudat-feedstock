@@ -27,8 +27,6 @@ cmake \
 
 make -j4
 
-ctest --verbose
-
 if [[ "$OSTYPE" != "darwin"* ]]; then
   ctest --verbose
 
