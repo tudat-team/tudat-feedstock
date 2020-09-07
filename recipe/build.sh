@@ -12,7 +12,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 else
   _TESTS=true
   _ESTIMATION=true
-  _NPROC=2
+  _NPROC=4
 fi
 
 mkdir build
@@ -31,14 +31,11 @@ cmake \
   -DTUDAT_BUILD_TUDAT_TUTORIALS=off \
   -DTUDAT_BUILD_WITH_SOFA_INTERFACE=on \
   -DTUDAT_BUILD_WITH_SPICE_INTERFACE=on \
-  -DTUDAT_BUILD_WITH_JSON_INTERFACE=off \
+  -DTUDAT_BUILD_WITH_JSON_INTERFACE=on \
   ..
 
 make -j$_NPROC
 
-if [[ "$OSTYPE" != "darwin"* ]]; then
-  ctest --verbose
-
-fi
+ctest --verbose
 
 make install
