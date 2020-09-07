@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
+  # Mac OSX
   _TESTS=false
 else
   _TESTS=true
 fi
-# Mac OSX
 
 mkdir build
 
@@ -28,5 +28,10 @@ cmake \
 make -j4
 
 ctest --verbose
+
+if [[ "$OSTYPE" != "darwin"* ]]; then
+  ctest --verbose
+
+fi
 
 make install
