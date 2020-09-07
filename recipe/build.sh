@@ -17,8 +17,8 @@ cmake \
     -DTUDAT_BUILD_WITH_SPICE_INTERFACE=on \
     ..
 
-make -j2
+make -j1
 
-#ctest --verbose
+ctest --verbose
 
 make install
