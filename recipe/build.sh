@@ -12,7 +12,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 else
   _TESTS=true
   _ESTIMATION=true
-  _NPROC=4
+  _NPROC=2
 fi
 
 mkdir build
