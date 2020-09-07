@@ -4,9 +4,15 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac OSX
   _TESTS=false
   _ESTIMATION=false
+  _NPROC=4
+   # Reason: The job exceeded the maximum time limit for jobs, and has been terminated.
+   # This will either have to be resolved by changing build config or paying for
+   # a better package for ++ build times.
+   # https://travis-ci.com/github/tudat-team/tudat-feedstock
 else
   _TESTS=true
   _ESTIMATION=true
+  _NPROC=2
 fi
 
 mkdir build
@@ -28,7 +34,7 @@ cmake \
   -DTUDAT_BUILD_WITH_JSON_INTERFACE=off \
   ..
 
-make -j4
+make -j$_NPROC
 
 if [[ "$OSTYPE" != "darwin"* ]]; then
   ctest --verbose
