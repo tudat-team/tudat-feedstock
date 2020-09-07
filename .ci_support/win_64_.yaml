@@ -11,3 +11,5 @@ pin_run_as_build:
     max_pin: x.x.x
 target_platform:
 - win-64
+tudat_resources:
+- 1.1.2
