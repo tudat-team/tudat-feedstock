@@ -2,8 +2,8 @@
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac OSX
-  _TESTS=false
-  _ESTIMATION=false
+  _TESTS=true
+  _ESTIMATION=true
   _NPROC=4
    # Reason: The job exceeded the maximum time limit for jobs, and has been terminated.
    # This will either have to be resolved by changing build config or paying for
