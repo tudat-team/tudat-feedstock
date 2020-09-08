@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/tudat-team/tudat.git
-  git_rev: b1f6373970ba054b5a573d3a1312ea9c4ca47869
+  git_rev: a95b771ddce5f8bae5e4a6c6872bc4f2d59cab54
 
 build:
   # A non-negative integer representing the build number of the package.
@@ -16,7 +16,7 @@ build:
   #  and versions to determine the latest one. This is important because
   #  new builds that contain bug fixes for the way a package is built may be
   #  added to a repository.
-  number: 102
+  number: 103
 
   #  ignore_run_exports:
   #    - m2w64-gcc-libs  # [win]
@@ -31,9 +31,7 @@ requirements:
     # or native when not cross-compiling), and any source pre-processors.
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('c') }}              # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
-    - m2w64-toolchain                  # [win]
-    - m2w64-gcc                        # [win]
+    - vs2017_{{ target_platform  }}    # [win]
     - cmake
 
 outputs:

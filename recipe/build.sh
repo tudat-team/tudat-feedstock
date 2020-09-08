@@ -5,6 +5,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   _TESTS=true
   _ESTIMATION=true
   _NPROC=4
+  _SKIP_JSON_TESTS=false
    # Reason: The job exceeded the maximum time limit for jobs, and has been terminated.
    # This will either have to be resolved by changing build config or paying for
    # a better package for ++ build times.
@@ -13,6 +14,7 @@ else
   _TESTS=true
   _ESTIMATION=true
   _NPROC=2
+  _SKIP_JSON_TESTS=true
 fi
 
 mkdir build
@@ -32,6 +34,7 @@ cmake \
   -DTUDAT_BUILD_WITH_SOFA_INTERFACE=on \
   -DTUDAT_BUILD_WITH_SPICE_INTERFACE=on \
   -DTUDAT_BUILD_WITH_JSON_INTERFACE=on \
+  -DTUDAT_SKIP_JSON_TESTS=$_SKIP_JSON_TESTS \
   ..
 
 make -j$_NPROC
