@@ -31,7 +31,9 @@ requirements:
     # or native when not cross-compiling), and any source pre-processors.
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('c') }}              # [not win]
-    - vs2017_{{ target_platform  }}    # [win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - m2w64-toolchain                  # [win]
+    - m2w64-gcc                        # [win]
     - cmake
 
 outputs:
