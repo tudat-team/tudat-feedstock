@@ -29,10 +29,10 @@ requirements:
     # system and include things such as revision control systems (Git, SVN) make
     # tools (GNU make, Autotool, CMake) and compilers (real cross, pseudo-cross,
     # or native when not cross-compiling), and any source pre-processors.
+    - cmake
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('c') }}              # [not win]
     - vs2017_{{ target_platform  }}    # [win]
-    - cmake
 
 outputs:
   - name: {{ name }}
