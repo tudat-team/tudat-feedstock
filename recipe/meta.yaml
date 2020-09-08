@@ -36,19 +36,6 @@ requirements:
 
 outputs:
   - name: {{ name }}
-    build:
-      #      ignore_run_exports:
-      #        - m2w64-gcc-libs  # [win]
-      run_exports:
-        - tudat-resources
-        - cspice-cmake
-        - sofa-cmake
-      detect_binary_files_with_prefix: true
-      missing_dso_whitelist:
-        - libgcc-ng
-        - libstdcxx-ng
-        - libm
-        - libc
     requirements:
       host:
         # Packages that need to be specific to the target platform when the
@@ -65,6 +52,9 @@ outputs:
         # that are installed automatically whenever the package is installed.
         # Package names should follow the package match specifications.
         - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
+        - {{ pin_compatible('tudat-resources', max_pin='x.x') }}
+        - {{ pin_compatible('cspice-cmake', max_pin='x.x') }}
+        - {{ pin_compatible('sofa-cmake', max_pin='x.x') }}
     test:
       downstreams:
         - tudatpy
