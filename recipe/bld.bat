@@ -11,10 +11,11 @@ cmake ^
     -DPREFIX=%LIBRARY_PREFIX% ^
     -DTUDAT_BUILD_STATIC_LIBRARY=on ^
     -DTUDAT_BUILD_TUDAT_TUTORIALS=off ^
-    -DTUDAT_BUILD_TESTS=off ^
+    -DTUDAT_BUILD_TESTS=on ^
     -DTUDAT_BUILD_WITH_SOFA_INTERFACE=on ^
     -DTUDAT_BUILD_WITH_SPICE_INTERFACE=on ^
-    -DTUDAT_BUILD_WITH_JSON_INTERFACE=off ^
+    -DTUDAT_DOWNLOAD_AND_BUILD_BOOST=on ^
+    -DTUDAT_BUILD_WITH_JSON_INTERFACE=on ^
     ..
 if errorlevel 1 exit 1
 cmake --build . --config RelWithDebInfo --target install -- -j2
