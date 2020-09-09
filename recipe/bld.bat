@@ -3,7 +3,9 @@ if errorlevel 1 exit 1
 cd build
 if errorlevel 1 exit 1
 cmake ^
-    -G "Visual Studio 15 2017 Win64" ^
+    -G %CMAKE_GEN% ^
+    -DCMAKE_C_COMPILER=%c_compiler% ^
+    -DCMAKE_CXX_COMPILER=%cxx_compiler% ^
     -DCMAKE_CXX_STANDARD=17 ^
     -DCMAKE_BUILD_TYPE=Release ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
