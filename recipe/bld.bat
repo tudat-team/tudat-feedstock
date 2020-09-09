@@ -3,7 +3,7 @@ if errorlevel 1 exit 1
 cd build
 if errorlevel 1 exit 1
 cmake ^
-    -G %CMAKE_GEN% ^
+    -G "%CMAKE_GEN%" ^
     -DCMAKE_C_COMPILER=%c_compiler% ^
     -DCMAKE_CXX_COMPILER=%cxx_compiler% ^
     -DCMAKE_CXX_STANDARD=17 ^
