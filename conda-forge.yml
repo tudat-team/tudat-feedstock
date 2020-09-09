@@ -16,8 +16,6 @@ appveyor:
   secure:
     BINSTAR_TOKEN: vWktDJSW9Rh2frmNkzdUHF2n4WzalOoKudWGdBLo6jcC/suzU+fViO/3/TxLOnmW
 
-channel_priority: strict   # [win]
-
 azure:
   # flag for forcing the building all supported providers
   force: True
