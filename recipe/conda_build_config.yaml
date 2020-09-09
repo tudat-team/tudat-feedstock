@@ -7,4 +7,3 @@ boost_cpp:
   - 1.67.0
 tudat_resources:
   - 1.1.2
-channel_priority: strict
