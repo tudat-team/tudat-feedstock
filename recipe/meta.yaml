@@ -30,9 +30,9 @@ requirements:
     # tools (GNU make, Autotool, CMake) and compilers (real cross, pseudo-cross,
     # or native when not cross-compiling), and any source pre-processors.
     - cmake
-    - {{ compiler('cxx') }}            # [not win]
-    - {{ compiler('c') }}              # [not win]
-    - vs2017_{{ target_platform  }}    # [win]
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+    #- vs2017_{{ target_platform  }}
 
   #    - {{ compiler('m2w64_c') }}        #
 #    - m2w64-toolchain                  #
