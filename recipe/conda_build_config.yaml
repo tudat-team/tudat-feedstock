@@ -1,6 +1,6 @@
 channel_sources:
-  - msys2, tudat-team, conda-forge, defaults # [win]
-  - tudat-team, conda-forge, defaults # [not win]
+  - msys2, tudat-team, conda-forge # [win]
+  - tudat-team, conda-forge # [not win]
 channel_targets:
   - tudat-team main
 boost_cpp:
