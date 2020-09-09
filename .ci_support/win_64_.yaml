@@ -3,7 +3,7 @@ boost_cpp:
 c_compiler:
 - vs2017
 channel_sources:
-- tudat-team, conda-forge, defaults
+- m2sys, tudat-team, conda-forge, defaults
 channel_targets:
 - tudat-team main
 cxx_compiler:
