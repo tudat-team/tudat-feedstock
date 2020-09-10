@@ -1,7 +1,5 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
-boost_cpp:
-- 1.67.0
 c_compiler:
 - clang
 c_compiler_version:
@@ -16,10 +14,5 @@ cxx_compiler_version:
 - '10'
 macos_machine:
 - x86_64-apple-darwin13.4.0
-pin_run_as_build:
-  boost-cpp:
-    max_pin: x.x.x
 target_platform:
 - osx-64
-tudat_resources:
-- 1.1.2
