@@ -17,7 +17,7 @@ cmake ^
     -DTUDAT_BUILD_WITH_JSON_INTERFACE=on ^
     ..
 if errorlevel 1 exit 1
-cmake --build . --config RelWithDebInfo --target install -- -j2
+cmake --build . --config RelWithDebInfo --target install
 if errorlevel 1 exit 1
 ctest --verbose
 if errorlevel 1 exit 1
