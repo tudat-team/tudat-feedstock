@@ -37,6 +37,8 @@ jobs:
     displayName: Run docker build
     env:
       BINSTAR_TOKEN: $(BINSTAR_TOKEN)
+      FEEDSTOCK_TOKEN: $(FEEDSTOCK_TOKEN)
+      STAGING_BINSTAR_TOKEN: $(STAGING_BINSTAR_TOKEN)
   - script: |
         if [ -d build_artifacts ]; then
           echo "##vso[task.setVariable variable=CONDA_BLD_DIR_EXISTS]true"
