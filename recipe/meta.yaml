@@ -1,14 +1,17 @@
 {% set name = "tudat" %}
   {% set version = "2.8.26" %}
+  {% set boost_version = "1.67.0" %}
+  {% set boost_filename = "boost_%s.tar.bz2" % boost_version.replace(".", "_") %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  git_url: https://github.com/tudat-team/tudat.git
-  git_rev: cccbff07ad4cc6d12d97a9898fa9745c6169c653
-
+  - git_url: https://github.com/tudat-team/tudat.git
+    git_rev: ab3e9873a8750152ae9e9c4e6b7cd77cf00abe5d
+  - url: https://dl.bintray.com/boostorg/release/{{ boost_version }}/source/{{ boost_filename }} # [win]
+    folder: boost # [win]
 build:
   # A non-negative integer representing the build number of the package.
   #  Unlike the build string, the build_number is inspected by conda.
@@ -45,7 +48,7 @@ outputs:
         # Packages required to run the package. These are the dependencies
         # that are installed automatically whenever the package is installed.
         # Package names should follow the package match specifications.
-        - {{ pin_compatible('boost-cpp', max_pin='x.x') }    # [not win]
+        - {{ pin_compatible('boost-cpp', max_pin='x.x') }}    # [not win]
         - {{ pin_compatible('tudat-resources', max_pin='x.x') }}
         - {{ pin_compatible('cspice-cmake', max_pin='x.x') }}
         - {{ pin_compatible('sofa-cmake', max_pin='x.x') }}
