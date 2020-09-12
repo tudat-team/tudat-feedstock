@@ -2,6 +2,7 @@
 :: Boost
 :::::::::::::::::::::::::::::::::::::::::::
 :: Start with bootstrap
+cd boost
 call bootstrap.bat
 if errorlevel 1 exit 1
 
@@ -42,7 +43,7 @@ if errorlevel 1 exit 1
 :: Set BOOST_AUTO_LINK_NOMANGLE so that auto-linking uses system layout
 echo &echo.                           >> %LIBRARY_INC%\boost\config\user.hpp
 echo #define BOOST_AUTO_LINK_NOMANGLE >> %LIBRARY_INC%\boost\config\user.hpp
-
+cd ..
 :::::::::::::::::::::::::::::::::::::::::::
 :: Tudat
 :::::::::::::::::::::::::::::::::::::::::::

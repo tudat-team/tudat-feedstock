@@ -11,6 +11,7 @@ source:
   - git_url: https://github.com/tudat-team/tudat.git
     git_rev: ab3e9873a8750152ae9e9c4e6b7cd77cf00abe5d
   - url: https://dl.bintray.com/boostorg/release/{{ boost_version }}/source/{{ boost_filename }} # [win]
+    folder: boost   # [win]
 build:
   # A non-negative integer representing the build number of the package.
   #  Unlike the build string, the build_number is inspected by conda.
