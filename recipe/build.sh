@@ -35,6 +35,7 @@ cmake \
   -DTUDAT_BUILD_WITH_JSON_INTERFACE=on \
   -DTUDAT_SKIP_JSON_TESTS=$SKIP_JSON_TESTS \
   -DBoost_NO_BOOST_CMAKE=ON \
+  -D_GLIBCXX_USE_CXX11_ABI=0 \
 ..
 # https://github.com/lightspark/lightspark/issues/344
 make -j$NPROC

@@ -65,7 +65,9 @@ cmake ^
     -DTUDAT_BUILD_WITH_SPICE_INTERFACE=on ^
     -DTUDAT_DOWNLOAD_AND_BUILD_BOOST=off ^
     -DTUDAT_BUILD_WITH_JSON_INTERFACE=on ^
+    -D_ENABLE_EXTENDED_ALIGNED_STORAGE=on ^
     -DBoost_NO_BOOST_CMAKE=ON ^
+    -D_GLIBCXX_USE_CXX11_ABI=0 ^
     ..
 if errorlevel 1 exit 1
 cmake --build . --config RelWithDebInfo --target install
