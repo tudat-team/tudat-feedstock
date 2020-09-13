@@ -65,6 +65,8 @@ cmake ^
     -DTUDAT_BUILD_WITH_SPICE_INTERFACE=on ^
     -DTUDAT_DOWNLOAD_AND_BUILD_BOOST=off ^
     -DTUDAT_BUILD_WITH_JSON_INTERFACE=on ^
+    :: https://github.com/lightspark/lightspark/issues/344
+    -DBoost_NO_BOOST_CMAKE=ON ^
     ..
 if errorlevel 1 exit 1
 cmake --build . --config RelWithDebInfo --target install

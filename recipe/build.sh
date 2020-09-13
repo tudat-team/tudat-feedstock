@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#cd tudat
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac OSX
   ENABLE_TESTS=true
