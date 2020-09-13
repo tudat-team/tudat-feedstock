@@ -9,10 +9,10 @@ package:
 
 source:
   git_url: https://github.com/tudat-team/tudat.git
-  git_rev: 2a33c505948356ca4a9ee3921d04945cd0a092a8
-    
-  #- url: https://dl.bintray.com/boostorg/release/{{ boost_version }}/source/{{ boost_filename }} # [win]
-  #  folder: boost   # [win]
+  git_rev: c14b3802065ccc2e601db2a6c06eb9f6798bd76d
+#  - url: https://dl.bintray.com/boostorg/release/{{ boost_version }}/source/{{ boost_filename }} # [win]
+#    folder: boost   # [win]
+
 build:
   # A non-negative integer representing the build number of the package.
   #  Unlike the build string, the build_number is inspected by conda.
