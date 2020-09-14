@@ -29,8 +29,9 @@ requirements:
     # tools (GNU make, Autotool, CMake) and compilers (real cross, pseudo-cross,
     # or native when not cross-compiling), and any source pre-processors.
     - cmake
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('cxx') }}            # [not win]
+    - vs2015_{{ target_platform  }}    # [win]
 
 outputs:
   - name: {{ name }}
