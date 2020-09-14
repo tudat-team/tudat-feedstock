@@ -67,8 +67,12 @@ cmake ^
     -DBoost_NO_BOOST_CMAKE=ON ^
     -D_GLIBCXX_USE_CXX11_ABI=0 ^
     ..
+if errorlevel 1 exit 1
 
 cmake --build . --config RelWithDebInfo --target install
+if errorlevel 1 exit 1
 
 ctest --verbose
+if errorlevel 1 exit 1
+
 
