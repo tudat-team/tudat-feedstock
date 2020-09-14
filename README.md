@@ -113,45 +113,45 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_boost_cpp1.69.0target_platformwin-64</td>
+              <td>win_64_boost_cpp1.69.0</td>
               <td>
                 <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=&branchName=master">
-                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=win&configuration=win_64_boost_cpp1.69.0target_platformwin-64" alt="variant">
+                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=win&configuration=win_64_boost_cpp1.69.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_boost_cpp1.70.0target_platformwin-64</td>
+              <td>win_64_boost_cpp1.70.0</td>
               <td>
                 <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=&branchName=master">
-                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=win&configuration=win_64_boost_cpp1.70.0target_platformwin-64" alt="variant">
+                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=win&configuration=win_64_boost_cpp1.70.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_boost_cpp1.71.0target_platformwin-64</td>
+              <td>win_64_boost_cpp1.71.0</td>
               <td>
                 <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=&branchName=master">
-                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=win&configuration=win_64_boost_cpp1.71.0target_platformwin-64" alt="variant">
+                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=win&configuration=win_64_boost_cpp1.71.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_boost_cpp1.72.0target_platformwin-64</td>
+              <td>win_64_boost_cpp1.72.0</td>
               <td>
                 <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=&branchName=master">
-                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=win&configuration=win_64_boost_cpp1.72.0target_platformwin-64" alt="variant">
+                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=win&configuration=win_64_boost_cpp1.72.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_boost_cpp1.73.0target_platformwin-64</td>
+              <td>win_64_boost_cpp1.73.0</td>
               <td>
                 <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=&branchName=master">
-                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=win&configuration=win_64_boost_cpp1.73.0target_platformwin-64" alt="variant">
+                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=win&configuration=win_64_boost_cpp1.73.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_boost_cpp1.74.0target_platformwin-64</td>
+              <td>win_64_boost_cpp1.74.0</td>
               <td>
                 <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=&branchName=master">
-                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=win&configuration=win_64_boost_cpp1.74.0target_platformwin-64" alt="variant">
+                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=win&configuration=win_64_boost_cpp1.74.0" alt="variant">
                 </a>
               </td>
             </tr>
