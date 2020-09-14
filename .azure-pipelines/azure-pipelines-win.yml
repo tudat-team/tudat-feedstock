@@ -8,23 +8,8 @@ jobs:
     vmImage: vs2017-win2016
   strategy:
     matrix:
-      win_64_boost_cpp1.69.0:
-        CONFIG: win_64_boost_cpp1.69.0
-        UPLOAD_PACKAGES: 'True'
-      win_64_boost_cpp1.70.0:
-        CONFIG: win_64_boost_cpp1.70.0
-        UPLOAD_PACKAGES: 'True'
-      win_64_boost_cpp1.71.0:
-        CONFIG: win_64_boost_cpp1.71.0
-        UPLOAD_PACKAGES: 'True'
-      win_64_boost_cpp1.72.0:
-        CONFIG: win_64_boost_cpp1.72.0
-        UPLOAD_PACKAGES: 'True'
-      win_64_boost_cpp1.73.0:
-        CONFIG: win_64_boost_cpp1.73.0
-        UPLOAD_PACKAGES: 'True'
-      win_64_boost_cpp1.74.0:
-        CONFIG: win_64_boost_cpp1.74.0
+      win_64_:
+        CONFIG: win_64_
         UPLOAD_PACKAGES: 'True'
     maxParallel: 4
   timeoutInMinutes: 360
