@@ -8,10 +8,10 @@ package:
   version: {{ version }}
 
 source:
-  - git_url: https://github.com/tudat-team/tudat.git
-    git_rev: 41ce53019d6913cf015405477688d488e1bdc5b8
-  - url: https://dl.bintray.com/boostorg/release/{{ boost_version }}/source/{{ boost_filename }} # [win]
-    folder: boost   # [win]
+  git_url: https://github.com/tudat-team/tudat.git
+  git_rev: 41ce53019d6913cf015405477688d488e1bdc5b8
+#  - url: https://dl.bintray.com/boostorg/release/{{ boost_version }}/source/{{ boost_filename }} # [win]
+#    folder: boost   # [win]
 
 build:
   # A non-negative integer representing the build number of the package.
@@ -28,9 +28,10 @@ requirements:
     # system and include things such as revision control systems (Git, SVN) make
     # tools (GNU make, Autotool, CMake) and compilers (real cross, pseudo-cross,
     # or native when not cross-compiling), and any source pre-processors.
+    - {{ compiler('cxx') }}            # [not win]
+    - {{ compiler('c') }}              # [not win]
+    - vs2017_{{ target_platform  }}    # [win]
     - cmake
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
 
 outputs:
   - name: {{ name }}
@@ -40,7 +41,7 @@ outputs:
         # target platform is not necessarily the same as the native build
         # platform
         - tudat-resources
-        - boost-cpp   # [not win]
+        - boost-cpp
         - cspice-cmake
         - sofa-cmake
         - nlohmann_json
@@ -49,7 +50,7 @@ outputs:
         # Packages required to run the package. These are the dependencies
         # that are installed automatically whenever the package is installed.
         # Package names should follow the package match specifications.
-        - {{ pin_compatible('boost-cpp', max_pin='x.x') }}    # [not win]
+        - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
         - {{ pin_compatible('tudat-resources', max_pin='x.x') }}
         - {{ pin_compatible('cspice-cmake', max_pin='x.x') }}
         - {{ pin_compatible('sofa-cmake', max_pin='x.x') }}
