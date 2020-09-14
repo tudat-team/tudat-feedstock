@@ -10,8 +10,8 @@ package:
 source:
   git_url: https://github.com/tudat-team/tudat.git
   git_rev: 41ce53019d6913cf015405477688d488e1bdc5b8
-#  - url: https://dl.bintray.com/boostorg/release/{{ boost_version }}/source/{{ boost_filename }} # [win]
-#    folder: boost   # [win]
+  #  - url: https://dl.bintray.com/boostorg/release/{{ boost_version }}/source/{{ boost_filename }} # [win]
+  #    folder: boost   # [win]
 
 build:
   # A non-negative integer representing the build number of the package.
