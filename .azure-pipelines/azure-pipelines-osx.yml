@@ -8,12 +8,6 @@ jobs:
     vmImage: macOS-10.15
   strategy:
     matrix:
-      osx_64_boost_cpp1.67.0:
-        CONFIG: osx_64_boost_cpp1.67.0
-        UPLOAD_PACKAGES: 'True'
-      osx_64_boost_cpp1.68.0:
-        CONFIG: osx_64_boost_cpp1.68.0
-        UPLOAD_PACKAGES: 'True'
       osx_64_boost_cpp1.69.0:
         CONFIG: osx_64_boost_cpp1.69.0
         UPLOAD_PACKAGES: 'True'
@@ -22,6 +16,15 @@ jobs:
         UPLOAD_PACKAGES: 'True'
       osx_64_boost_cpp1.71.0:
         CONFIG: osx_64_boost_cpp1.71.0
+        UPLOAD_PACKAGES: 'True'
+      osx_64_boost_cpp1.72.0:
+        CONFIG: osx_64_boost_cpp1.72.0
+        UPLOAD_PACKAGES: 'True'
+      osx_64_boost_cpp1.73.0:
+        CONFIG: osx_64_boost_cpp1.73.0
+        UPLOAD_PACKAGES: 'True'
+      osx_64_boost_cpp1.74.0:
+        CONFIG: osx_64_boost_cpp1.74.0
         UPLOAD_PACKAGES: 'True'
     maxParallel: 8
   timeoutInMinutes: 360
