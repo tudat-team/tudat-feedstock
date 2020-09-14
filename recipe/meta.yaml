@@ -9,7 +9,7 @@ package:
 
 source:
   git_url: https://github.com/tudat-team/tudat.git
-  git_rev: b47962e77fe27f029cad26065808ae77d980fa2f
+  git_rev: 41ce53019d6913cf015405477688d488e1bdc5b8
 #  - url: https://dl.bintray.com/boostorg/release/{{ boost_version }}/source/{{ boost_filename }} # [win]
 #    folder: boost   # [win]
 
