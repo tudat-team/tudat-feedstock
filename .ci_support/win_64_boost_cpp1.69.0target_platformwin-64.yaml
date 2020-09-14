@@ -1,0 +1,11 @@
+boost_cpp:
+- 1.69.0
+channel_sources:
+- tudat-team, conda-forge, defaults
+channel_targets:
+- tudat-team main
+pin_run_as_build:
+  boost-cpp:
+    max_pin: x.x.x
+target_platform:
+- win-64
