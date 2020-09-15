@@ -1,7 +1,7 @@
 boost_cpp:
-- 1.70.0
+- 1.69.0
 channel_sources:
-- tudat-team, conda-forge, rdonnelly, defaults
+- tudat-team, conda-forge, defaults
 channel_targets:
 - tudat-team main
 pin_run_as_build:

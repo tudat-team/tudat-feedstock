@@ -30,8 +30,10 @@ requirements:
     # or native when not cross-compiling), and any source pre-processors.
     - {{ compiler('cxx') }}  # [not win]
     - {{ compiler('c') }}  # [not win]
+    - {{ compiler('clang') }}  # [win]
+    - {{ compiler('clangxx') }}  # [win]
     - cmake
-    - vs2019_{{ target_platform  }}    # [win]
+  #    - vs2019_{{ target_platform  }}    # [win]
 
 outputs:
   - name: {{ name }}
