@@ -31,7 +31,6 @@ requirements:
     - {{ compiler('cxx') }}  # [not win]
     - {{ compiler('c') }}  # [not win]
     - {{ compiler('clang') }}  # [win]
-    - {{ compiler('clangxx') }}  # [win]
     - cmake
   #    - vs2019_{{ target_platform  }}    # [win]
 
