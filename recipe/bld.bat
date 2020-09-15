@@ -51,7 +51,7 @@ mkdir build
 cd build
 
 cmake ^
-    -G "%CMAKE_GEN%" ^
+    -G "Ninja" ^
     -DCMAKE_C_COMPILER=%BUILD_PREFIX%\Library\bin\clang ^
     -DCMAKE_CXX_COMPILER=%BUILD_PREFIX%\Library\bin\clang++ ^
     -DCMAKE_CXX_STANDARD=17 ^
