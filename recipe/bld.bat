@@ -52,7 +52,9 @@ cd build
 
 cmake ^
     -G "%CMAKE_GEN%" ^
-    -T llvm ^
+    -T clang-cl ^
+    -DCMAKE_C_COMPILER="%BUILD_PREFIX%\Library\bin\clang.exe" ^
+    -DCMAKE_CXX_COMPILER="%BUILD_PREFIX%\Library\bin\clang++.exe" ^
     -DCMAKE_CXX_STANDARD=17 ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
