@@ -1,3 +1,6 @@
 *.pyc
 
 build_artifacts
+/recipe/.vs
+/.vs/tudat-feedstock/v15
+/.vs
