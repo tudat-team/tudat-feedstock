@@ -17,9 +17,6 @@ jobs:
       osx_64_boost_cpp1.71.0:
         CONFIG: osx_64_boost_cpp1.71.0
         UPLOAD_PACKAGES: 'True'
-      osx_64_boost_cpp1.72.0:
-        CONFIG: osx_64_boost_cpp1.72.0
-        UPLOAD_PACKAGES: 'True'
     maxParallel: 8
   timeoutInMinutes: 360
 
