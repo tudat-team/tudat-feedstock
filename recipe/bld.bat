@@ -10,7 +10,8 @@ cmake ^
     -DCMAKE_C_COMPILER="clang-cl.exe" ^
     -DCMAKE_CXX_COMPILER="clang-cl.exe" ^
     -DCMAKE_CXX_STANDARD=17 ^
-    -DCFLAGS="--dependent-lib=concrt -lconcrt" ^
+    -DCFLAGS="%CFLAGS% /link %LDFLAGS%" ^
+    -DCXXFLAGS="%CXXFLAGS% /link %LDFLAGS%" ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -DTUDAT_BUILD_TESTS=1 ^
