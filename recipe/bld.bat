@@ -6,7 +6,7 @@ cd build
 set "BUILD_PREFIX=%BUILD_PREFIX:\=/%"
 
 cmake ^
-    -G "Ninja" ^
+    -G "NMake Makefiles" ^
     -DCMAKE_C_COMPILER="clang-cl.exe" ^
     -DCMAKE_CXX_COMPILER="clang-cl.exe" ^
     -DCMAKE_CXX_STANDARD=17 ^
