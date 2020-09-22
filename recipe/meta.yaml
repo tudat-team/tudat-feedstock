@@ -27,7 +27,6 @@ requirements:
     - {{ compiler('cxx') }}    # [not win]
     - {{ compiler('c') }}      # [not win]
     - {{ compiler('clang') }}  # [win]
-    - ninja                    # [win]
     - cmake
 
 outputs:
