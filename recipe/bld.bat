@@ -6,12 +6,8 @@ cd build
 set "BUILD_PREFIX=%BUILD_PREFIX:\=/%"
 
 cmake ^
-    -G "Ninja" ^
-    -DCMAKE_C_COMPILER="clang-cl.exe" ^
-    -DCMAKE_CXX_COMPILER="clang-cl.exe" ^
+    -G "NMake Makefiles" ^
     -DCMAKE_CXX_STANDARD=17 ^
- #   -DCFLAGS="%CFLAGS% /link -Wl,-defaultlib:%BUILD_PREFIX%/lib/clang/9.0.1/lib/windows/clang_rt.builtins-x86_64.lib" ^
- #   -DCXXFLAGS="%CXXFLAGS% /link -Wl,-defaultlib:%BUILD_PREFIX%/lib/clang/9.0.1/lib/windows/clang_rt.builtins-x86_64.lib" ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -DTUDAT_BUILD_TESTS=1 ^
