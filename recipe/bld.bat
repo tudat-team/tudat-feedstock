@@ -1,6 +1,7 @@
 mkdir build
 cd build
 
+:: TODO: DTUDAT_BUILD_WITH_ESTIMATION_TOOLS off doesn't work. Source code doesn't adjust correctly.
 :: backslashes in %BUILD_PREFIX% causes errors in CMake when parsing strings
 :: this line replaces backslashes with forward slashes for %BUILD_PREFIX%
 set "BUILD_PREFIX=%BUILD_PREFIX:\=/%"
@@ -13,7 +14,7 @@ cmake ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -DTUDAT_BUILD_TESTS=1 ^
-    -DTUDAT_BUILD_WITH_ESTIMATION_TOOLS=0 ^
+    -DTUDAT_BUILD_WITH_ESTIMATION_TOOLS=1 ^
     -DTUDAT_BUILD_STATIC_LIBRARY=1 ^
     -DTUDAT_BUILD_TUDAT_TUTORIALS=0 ^
     -DTUDAT_BUILD_WITH_SOFA_INTERFACE=1 ^
