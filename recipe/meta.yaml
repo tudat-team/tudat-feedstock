@@ -6,8 +6,9 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://github.com/tudat-team/tudat.git
-  git_rev: f6f56a88263d1ae24e611be0e72f233ea4bc0800
+  path: C:\Users\Geoffrey\CLionProjects\tudat-team\tudat
+#  git_url: https://github.com/tudat-team/tudat.git
+#  git_rev: 4b7ca63e2472479c5a2b198c0e7c6e59f577bfb2
 
 build:
   # A non-negative integer representing the build number of the package.
@@ -59,6 +60,11 @@ about:
   license: BSD
   license_family: BSD
   summary: A C++ platform to perform astrodynamics and space research.
+  description: |
+    SPICE is an ancillary information system that provides scientists and
+    engineers the capability to include space geometry and event data into
+    mission design, science observation planning, and science data analysis
+    software.
 
 extra:
   recipe-maintainers:
