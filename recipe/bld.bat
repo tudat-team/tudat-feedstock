@@ -8,7 +8,7 @@ set "BUILD_PREFIX=%BUILD_PREFIX:\=/%"
 
 cmake ^
     -G "NMake Makefiles" ^
-    -DCMAKE_CXX_STANDARD=17 ^
+    -DCMAKE_CXX_STANDARD=14 ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -DTUDAT_BUILD_TESTS=1 ^
@@ -26,7 +26,7 @@ cmake ^
     ..
 if errorlevel 1 exit 1
 
-cmake --build . --config RelWithDebInfo --target install
+cmake --build . --config Release --target install
 if errorlevel 1 exit 1
 
 ctest --verbose
