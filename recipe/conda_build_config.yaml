@@ -4,5 +4,3 @@ channel_targets:
   - tudat-team main
 boost_cpp:
   - 1.69.0
-  - 1.70.0 # [not linux]
-  - 1.71.0 # [not linux]
