@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/tudat-team/tudat.git
-  git_rev: 435d25d2c3e76e51ffa5103e2d63b9cea5c9d447
+  git_rev: 8c93c04f3d9de32cde15ec19a344355ecaefd5e9
 
 build:
   # A non-negative integer representing the build number of the package.
@@ -16,7 +16,7 @@ build:
   #  and versions to determine the latest one. This is important because
   #  new builds that contain bug fixes for the way a package is built may be
   #  added to a repository.
-    number: 22
+    number: 23
 
 requirements:
   build:
