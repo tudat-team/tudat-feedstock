@@ -24,7 +24,6 @@ cmake ^
     -DTUDAT_DISABLE_MSVC_CLANG_CL_FLAGS=1 ^
     -D_ENABLE_EXTENDED_ALIGNED_STORAGE=on ^
     -DBoost_NO_BOOST_CMAKE=ON ^
-    -D_GLIBCXX_USE_CXX11_ABI=0 ^
     ..
 if errorlevel 1 exit 1
 
