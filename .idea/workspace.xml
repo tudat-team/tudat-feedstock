@@ -84,6 +84,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -99,7 +100,7 @@
       <workItem from="1592517431446" duration="717000" />
       <workItem from="1592752598559" duration="10206000" />
       <workItem from="1615572984781" duration="142000" />
-      <workItem from="1615573138516" duration="2368000" />
+      <workItem from="1615573138516" duration="3404000" />
     </task>
     <task id="LOCAL-00001" summary="Changed to shared">
       <created>1592314755098</created>
@@ -202,6 +203,10 @@
       <screen x="0" y="27" width="1920" height="1052" />
     </state>
     <state x="746" y="298" width="424" height="492" key="FileChooserDialogImpl/0.27.1920.1052@0.27.1920.1052" timestamp="1615573126979" />
+    <state x="452" y="183" width="1016" height="738" key="SettingsEditor" timestamp="1615580480722">
+      <screen x="0" y="27" width="1920" height="1052" />
+    </state>
+    <state x="452" y="183" width="1016" height="738" key="SettingsEditor/0.27.1920.1052@0.27.1920.1052" timestamp="1615580480722" />
     <state x="617" y="315" width="681" height="481" key="git4idea.merge.GitPullDialog" timestamp="1615573150795">
       <screen x="0" y="27" width="1920" height="1052" />
     </state>
