@@ -1,5 +1,5 @@
 {% set name = "tudat" %}
-  {% set version = "2.8.26" %}
+{% set version = "2.9.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/tudat-team/tudat.git
-  git_rev: 2314a5dadbc733f509bb9db44f4d5c4329cefc36
+  git_rev: 6c3ff0d2c03fd957eea8f8ffa5ed5e394ed5f408
 
 build:
   # A non-negative integer representing the build number of the package.
@@ -16,7 +16,7 @@ build:
   #  and versions to determine the latest one. This is important because
   #  new builds that contain bug fixes for the way a package is built may be
   #  added to a repository.
-  number: 103
+    number: 47
 
 requirements:
   build:
@@ -24,9 +24,10 @@ requirements:
     # system and include things such as revision control systems (Git, SVN) make
     # tools (GNU make, Autotool, CMake) and compilers (real cross, pseudo-cross,
     # or native when not cross-compiling), and any source pre-processors.
+    - {{ compiler('cxx') }}    # [not win]
+    - {{ compiler('c') }}      # [not win]
+    - {{ compiler('clang') }}  # [win]
     - cmake
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
 
 outputs:
   - name: {{ name }}
@@ -59,7 +60,9 @@ about:
   license_family: BSD
   summary: A C++ platform to perform astrodynamics and space research.
 
+
 extra:
   recipe-maintainers:
     - ggarrett13
+    - DominicDirkx
 

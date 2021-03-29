@@ -1,0 +1,14 @@
+
+Windows
+=======
+libboost_unit_test_framework.lib(plain_report_formatter.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MT_StaticRelease' in unitTestSwingbyLegMga1DsmVelocity.obj [%SRC_DIR%\build\tests\src\astro\trajectory_design\test_trajectory_design_SwingbyLegMga1DsmVelocity.vcxproj]
+
+-
+
+
+Linux
+=====
+
+unitTestExponentialAtmosphere.cpp:(.text._ZN5boost9unit_test14make_test_caseERKNS_8functionIFvvEEENS0_13basic_cstringIKcEES8_m[_ZN5boost9unit_test14make_test_caseERKNS_8functionIFvvEEENS0_13basic_cstringIKcEES8_m]+0x36): undefined reference to `boost::unit_test::ut_detail::normalize_test_case_name(boost::unit_test::basic_cstring<char const>)'
+
+- boost version <= 1.67 needs D_GLIBCXX_USE_CXX11_ABI=0 in compile flags
