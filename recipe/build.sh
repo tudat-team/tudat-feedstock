@@ -34,10 +34,12 @@ cmake \
   -DTUDAT_SKIP_JSON_TESTS=$SKIP_JSON_TESTS \
   -DBoost_NO_BOOST_CMAKE=ON \
   -D_GLIBCXX_USE_CXX11_ABI=0 \
-..
+  ..
 # https://github.com/lightspark/lightspark/issues/344
 make -j$NPROC
 
-ctest --verbose
+if [[ "$CONDA_BUILD_CROSS_COMPILATION" != "1" ]]; then
+  ctest --verbose
+fi
 
 make install
