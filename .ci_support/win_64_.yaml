@@ -4,6 +4,8 @@ channel_sources:
 - tudat-team, conda-forge, defaults
 channel_targets:
 - tudat-team main
+eigen:
+- 3.3.7
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
