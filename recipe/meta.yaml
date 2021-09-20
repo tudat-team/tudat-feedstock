@@ -42,6 +42,7 @@ outputs:
         - sofa-cmake
         - nlohmann_json
         - eigen
+        - nrlmsise-00
       run:
         # Packages required to run the package. These are the dependencies
         # that are installed automatically whenever the package is installed.
@@ -50,6 +51,7 @@ outputs:
         - {{ pin_compatible('tudat-resources', max_pin='x.x') }}
         - {{ pin_compatible('cspice-cmake', max_pin='x.x') }}
         - {{ pin_compatible('sofa-cmake', max_pin='x.x') }}
+        - {{ pin_compatible('nrlmsise-00', max_pin='x.x') }}
     test:
       downstreams:
         - tudatpy
