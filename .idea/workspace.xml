@@ -23,15 +23,21 @@
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a2da7e9-8225-4282-8e22-702eee07e124" name="Default Changelist" comment="git commit -m &quot;MNT: Re-rendered with conda-build 3.19.2, conda-smithy 3.7.3, and conda-forge-pinning 2020.06.16.21.09.39&quot;" />
+    <list default="true" id="8a2da7e9-8225-4282-8e22-702eee07e124" name="Default Changelist" comment="git commit -m &quot;MNT: Re-rendered with conda-build 3.19.2, conda-smithy 3.7.3, and conda-forge-pinning 2020.06.16.21.09.39&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipe/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/recipe/meta.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -75,10 +81,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -94,6 +104,10 @@
       <workItem from="1592752598559" duration="10206000" />
       <workItem from="1615572984781" duration="142000" />
       <workItem from="1615573138516" duration="1280000" />
+      <workItem from="1632148538794" duration="921000" />
+      <workItem from="1632150530080" duration="10000" />
+      <workItem from="1642678361645" duration="433000" />
+      <workItem from="1642680785385" duration="2320000" />
     </task>
     <task id="LOCAL-00001" summary="Changed to shared">
       <created>1592314755098</created>
@@ -169,7 +183,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -190,15 +204,5 @@
     <MESSAGE value="Updated git_rev hash, checking boost versions passing" />
     <MESSAGE value="git commit -m &quot;MNT: Re-rendered with conda-build 3.19.2, conda-smithy 3.7.3, and conda-forge-pinning 2020.06.16.21.09.39&quot;" />
     <option name="LAST_COMMIT_MESSAGE" value="git commit -m &quot;MNT: Re-rendered with conda-build 3.19.2, conda-smithy 3.7.3, and conda-forge-pinning 2020.06.16.21.09.39&quot;" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="746" y="298" width="424" height="492" key="FileChooserDialogImpl" timestamp="1615573126979">
-      <screen x="0" y="27" width="1920" height="1052" />
-    </state>
-    <state x="746" y="298" width="424" height="492" key="FileChooserDialogImpl/0.27.1920.1052@0.27.1920.1052" timestamp="1615573126979" />
-    <state x="617" y="315" width="681" height="481" key="git4idea.merge.GitPullDialog" timestamp="1615573150795">
-      <screen x="0" y="27" width="1920" height="1052" />
-    </state>
-    <state x="617" y="315" width="681" height="481" key="git4idea.merge.GitPullDialog/0.27.1920.1052@0.27.1920.1052" timestamp="1615573150795" />
   </component>
 </project>
