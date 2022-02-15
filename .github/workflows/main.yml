@@ -1,0 +1,58 @@
+name: .github/workflows/autorerender.yml
+
+on:
+  issue_comment:
+    types: [created, edited, deleted]
+    branches: [main, develop]
+
+jobs:
+ check-comments:
+   runs-on: [ubuntu-latest]
+   if: contains(github.event.comment.body, '/rerender') 
+   steps:
+   - uses: actions/checkout@v2
+   - name: Set up Python 3.8
+     uses: actions/setup-python@v2
+     with:
+       python-version: 3.8
+   - name: Add conda to system path
+     run: |
+       # $CONDA is an environment variable pointing to the root of the miniconda directory
+       echo $CONDA/bin >> $GITHUB_PATH
+   - name: Enter root directory
+     run: |
+       cd ${GITHUB_WORKSPACE}
+   - name: Ensure conda updated
+     run: |
+       conda update conda
+   - name: Update conda
+     run: |
+       conda install -n root -c conda-forge conda-smithy
+   - name: Rerender feedstock
+     run: |
+       git config user.name "${GITHUB_ACTOR}"
+       git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+       conda smithy rerender -c auto
+       git push --all -f https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
+   - name: Report workflow failure
+     uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
+     with:
+       issue-number: ${{ github.event.issue.number }}
+       body: |
+         [Automated] `rerender` workflow failed ([see run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}))...
+     if: steps.check.outputs.status == 'failure'
+   - name: Report workflow cancelled
+     uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
+     with:
+       issue-number: ${{ github.event.issue.number }}
+       body: |
+         [Automated] `rerender` workflow was cancelled! ([see run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}))
+     if: steps.check.outputs.status == 'cancelled'
+   - name: Report workflow failure
+     uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
+     with:
+       issue-number: ${{ github.event.issue.number }}
+       body: |
+         [Automated] `rerender` workflow was successful! :tada: ([see run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}))
+     if: steps.check.outputs.status == 'success'
+ 
