@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/tudat-team/tudat.git
-  git_rev: 5dec4e17089ece2914ad6f5d9de2e7773d8c3635
+  git_rev: 85f82df9bfb753518c8d7e6e390a433a5d8ee425
 
 build:
   # A non-negative integer representing the build number of the package.
@@ -63,6 +63,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - ggarrett13
+    - geoffreygarrett
     - DominicDirkx
 
