@@ -1,5 +1,4 @@
 channel_sources:
-  - tudat-team, conda-forge, defaults
+  - tudat-team/label/dev, tudat-team, conda-forge, defaults
 channel_targets:
-  - tudat-team dev:
-  - 1.72.0
+  - tudat-team dev
