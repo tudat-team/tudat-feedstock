@@ -1,7 +1,7 @@
 {% set name = "tudat" %}
-  {% set version = "2.10.6.dev28" %}
+  {% set version = "2.10.6.dev29" %}
   {% set build = "0" %}
-  {% set git_rev = "v2.10.6.dev28" %}
+  {% set git_rev = "v2.10.6.dev29" %}
 
 package:
   name: {{ name }}
