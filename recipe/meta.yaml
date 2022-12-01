@@ -9,7 +9,7 @@ package:
 
 source:
   git_url: https://github.com/tudat-team/tudat.git
-  git_rev: feature/extended_precision
+  git_rev: b646c00938af6d8a9f359e2cd5cca8d08b5b4d11
 
 build:
   # A non-negative integer representing the build number of the package.
