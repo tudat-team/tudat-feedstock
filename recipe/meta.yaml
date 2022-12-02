@@ -5,11 +5,11 @@
 
 package:
   name: {{ name }}
-  version: {{ version }}
+  version: test
 
 source:
   git_url: https://github.com/tudat-team/tudat.git
-  git_rev: b646c00938af6d8a9f359e2cd5cca8d08b5b4d11
+  git_rev: 2a294e30d12cbfd3486bfac4ae56d212567a9261
 
 build:
   # A non-negative integer representing the build number of the package.
