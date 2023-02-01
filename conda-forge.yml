@@ -29,4 +29,4 @@ azure:
   # built packages) as an Azure pipeline artifact that can be downloaded
   store_build_artifacts: False
   variables:
-    - group: "conda-smithy"
+  - group: "conda-smithy"
