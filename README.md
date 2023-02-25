@@ -1,11 +1,11 @@
-About tudat
-===========
+About tudat-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/tudat-team/tudat-feedstock/blob/main/LICENSE.txt)
 
 Home: http://tudat.tudelft.nl/
 
 Package license: BSD
-
-Feedstock license: [BSD-3-Clause](https://github.com/tudat-team/tudat-feedstock/blob/master/LICENSE.txt)
 
 Summary: A C++ platform to perform astrodynamics and space research.
 
@@ -20,8 +20,8 @@ Current build status
     <td>
       <details>
         <summary>
-          <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=2&branchName=master">
-            <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master">
+          <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=2&branchName=main">
+            <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=main">
           </a>
         </summary>
         <table>
@@ -29,29 +29,29 @@ Current build status
           <tbody><tr>
               <td>linux_64</td>
               <td>
-                <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=2&branchName=master">
-                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=linux&configuration=linux%20linux_64_" alt="variant">
+                <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=2&branchName=main">
+                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64</td>
               <td>
-                <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=2&branchName=master">
-                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=2&branchName=main">
+                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64</td>
               <td>
-                <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=2&branchName=master">
-                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
+                <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=2&branchName=main">
+                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>win_64</td>
               <td>
-                <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=2&branchName=master">
-                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=master&jobName=win&configuration=win%20win_64_" alt="variant">
+                <a href="https://dev.azure.com/tudat-team/feedstock-builds/_build/latest?definitionId=2&branchName=main">
+                  <img src="https://dev.azure.com/tudat-team/feedstock-builds/_apis/build/status/tudat-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
