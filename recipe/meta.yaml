@@ -29,7 +29,8 @@ requirements:
     # or native when not cross-compiling), and any source pre-processors.
     - {{ compiler('cxx') }}    # [not win]
     - {{ compiler('c') }}      # [not win]
-    - {{ compiler('clang') }}  # [win]
+    - {{ compiler('cxx') }}    # [win]
+    - {{ compiler('c') }}      # [win]
     - cmake
     - make                     # [unix]
 outputs:
