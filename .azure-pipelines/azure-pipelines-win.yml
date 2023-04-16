@@ -60,7 +60,7 @@ jobs:
         if EXIST LICENSE.txt (
           copy LICENSE.txt "recipe\\recipe-scripts-license.txt"
         )
-        conda.exe mambabuild "recipe" -m .ci_support\%CONFIG%.yaml
+        conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
       displayName: Build recipe
       env:
         PYTHONUNBUFFERED: 1
