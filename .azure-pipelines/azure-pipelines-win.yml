@@ -5,7 +5,7 @@
 jobs:
 - job: win
   pool:
-    vmImage: windows-2022=20230402.1
+    vmImage: windows-2022
   strategy:
     matrix:
       win_64_:
@@ -60,7 +60,7 @@ jobs:
         if EXIST LICENSE.txt (
           copy LICENSE.txt "recipe\\recipe-scripts-license.txt"
         )
-        conda.exe mambabuild "recipe" -m .ci_support\%CONFIG%.yaml --suppress-variables
+        conda.exe mambabuild "recipe" -m .ci_support\%CONFIG%.yaml
       displayName: Build recipe
       env:
         PYTHONUNBUFFERED: 1
