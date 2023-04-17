@@ -46,6 +46,7 @@ outputs:
         - nlohmann_json
         - eigen
         - nrlmsise-00
+        - vs2015_runtime=14.34.31931	# [win]
       run:
         # Packages required to run the package. These are the dependencies
         # that are installed automatically whenever the package is installed.
