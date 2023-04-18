@@ -7,4 +7,4 @@ boost_cpp:
 c_compiler:       # [win]
   - clang         # [win]
 cxx_compiler:     # [win]
-  - clangxx       # [win]
+  - clang         # [win]
