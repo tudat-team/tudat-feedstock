@@ -5,6 +5,8 @@ cd build
 :: backslashes in %BUILD_PREFIX% causes errors in CMake when parsing strings
 :: this line replaces backslashes with forward slashes for %BUILD_PREFIX%
 set "BUILD_PREFIX=%BUILD_PREFIX:\=/%"
+set CC=clang
+set CXX=clang++
 
 cmake ^
     -G "NMake Makefiles" ^
