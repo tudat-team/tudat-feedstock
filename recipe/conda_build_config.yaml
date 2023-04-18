@@ -4,3 +4,13 @@ channel_targets:
   - tudat-team dev
 boost_cpp:
   - 1.72.0
+c_compiler:    # [win]
+- clang        # [win]
+cxx_compiler:  # [win]
+- clang        # [win]
+  
+  
+  
+  
+  
+  
