@@ -7,7 +7,7 @@ channel_sources:
 channel_targets:
 - tudat-team dev
 cxx_compiler:
-- clangxx
+- clang
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
