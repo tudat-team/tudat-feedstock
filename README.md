@@ -72,14 +72,14 @@ Current release info
 Installing tudat
 ================
 
-Installing `tudat` from the `tudat-team` channel can be achieved by adding `tudat-team` to your channels with:
+Installing `tudat` from the `tudat-team/label/dev` channel can be achieved by adding `tudat-team/label/dev` to your channels with:
 
 ```
-conda config --add channels tudat-team
+conda config --add channels tudat-team/label/dev
 conda config --set channel_priority strict
 ```
 
-Once the `tudat-team` channel has been enabled, `tudat` can be installed with `conda`:
+Once the `tudat-team/label/dev` channel has been enabled, `tudat` can be installed with `conda`:
 
 ```
 conda install tudat
@@ -94,26 +94,26 @@ mamba install tudat
 It is possible to list all of the versions of `tudat` available on your platform with `conda`:
 
 ```
-conda search tudat --channel tudat-team
+conda search tudat --channel tudat-team/label/dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search tudat --channel tudat-team
+mamba search tudat --channel tudat-team/label/dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search tudat --channel tudat-team
+mamba repoquery search tudat --channel tudat-team/label/dev
 
 # List packages depending on `tudat`:
-mamba repoquery whoneeds tudat --channel tudat-team
+mamba repoquery whoneeds tudat --channel tudat-team/label/dev
 
 # List dependencies of `tudat`:
-mamba repoquery depends tudat --channel tudat-team
+mamba repoquery depends tudat --channel tudat-team/label/dev
 ```
 
 
