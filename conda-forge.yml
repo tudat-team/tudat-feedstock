@@ -1,10 +1,6 @@
 github:
   user_or_org: tudat-team
 
-channels:
-  targets:
-    - [tudat-team, dev]
-
 conda_forge_output_validation: true
 
 provider:
