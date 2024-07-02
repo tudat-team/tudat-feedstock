@@ -4,11 +4,3 @@ channel_targets:
 - tudat-team dev
 target_platform:
 - win-64
-cxx_compiler:
-- clangxx
-cxx_compiler_version:
-- '18'
-c_compiler:
-- clang
-c_compiler_version:
-- '18'
