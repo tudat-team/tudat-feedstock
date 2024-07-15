@@ -1,6 +1,16 @@
+boost_cpp:
+- 1.78.0
+c_compiler:
+- clang
+c_compiler_version:
+- '18'
 channel_sources:
 - tudat-team/label/dev, tudat-team, conda-forge, defaults
 channel_targets:
 - tudat-team dev
+cxx_compiler:
+- clangxx
+cxx_compiler_version:
+- '18'
 target_platform:
 - win-64

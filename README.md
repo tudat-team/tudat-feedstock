@@ -3,7 +3,7 @@ About tudat-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/tudat-team/tudat-feedstock/blob/main/LICENSE.txt)
 
-Home: http://tudat.tudelft.nl/
+Home: https://docs.tudat.space/
 
 Package license: BSD
 
@@ -145,5 +145,5 @@ Feedstock Maintainers
 =====================
 
 * [@DominicDirkx](https://github.com/DominicDirkx/)
-* [@ggarrett13](https://github.com/ggarrett13/)
+* [@geoffreygarrett](https://github.com/geoffreygarrett/)
 
