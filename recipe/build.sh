@@ -21,7 +21,7 @@ mkdir build
 cd build
 
 cmake \
-  -DCMAKE_CXX_STANDARD=14 \
+  -DCMAKE_CXX_STANDARD=17 \
   -DCMAKE_BUILD_TYPE=Release \
   -DCMAKE_INSTALL_PREFIX=$PREFIX \
   -DCMAKE_PREFIX_PATH=$PREFIX \
@@ -34,7 +34,6 @@ cmake \
   -DTUDAT_BUILD_WITH_JSON_INTERFACE=off \
   -DTUDAT_SKIP_JSON_TESTS=$SKIP_JSON_TESTS \
   -DBoost_NO_BOOST_CMAKE=ON \
-  -D_GLIBCXX_USE_CXX11_ABI=0 \
   ..
 # https://github.com/lightspark/lightspark/issues/344
 make -j$NPROC
