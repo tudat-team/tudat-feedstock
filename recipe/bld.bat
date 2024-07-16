@@ -5,7 +5,7 @@ cd build
 :: backslashes in %BUILD_PREFIX% causes errors in CMake when parsing strings
 :: this line replaces backslashes with forward slashes for %BUILD_PREFIX%
 set "BUILD_PREFIX=%BUILD_PREFIX:\=/%"
-set BUILD_TESTS=0
+set BUILD_TESTS=1
 
 cmake ^
     -G "NMake Makefiles" ^
@@ -14,7 +14,7 @@ cmake ^
     -DCMAKE_CXX_STANDARD=17 ^
     -DCMAKE_PREFIX_PATH=LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
-    -DCMAKE_BUILD_TYPE=Release ^
+    -DCMAKE_BUILD_TYPE=Debug ^
     -DTUDAT_BUILD_TESTS=%BUILD_TESTS% ^
     -DTUDAT_BUILD_WITH_ESTIMATION_TOOLS=1 ^
     -DTUDAT_BUILD_STATIC_LIBRARY=1 ^
@@ -31,10 +31,8 @@ cmake ^
     ..
 if errorlevel 1 exit 1
 
-:: Set number of processors for faster compile
-set NPROC=4
+cmake --build . --config Release --target install
 
-cmake --build . --config Release --target install -- -j %NPROC%
 if errorlevel 1 exit 1
 
 if %BUILD_TESTS%==1 (
