@@ -1,7 +1,7 @@
 {% set name = "tudat" %}
-  {% set version = "2.13.0.dev12" %}
+  {% set version = "2.13.0.dev13" %}
   {% set build = "0" %}
-  {% set git_rev = "v2.13.0.dev12" %}
+  {% set git_rev = "v2.13.0.dev13" %}
 
 package:
   name: {{ name }}
@@ -10,17 +10,15 @@ package:
 source:
   git_url: https://github.com/tudat-team/tudat.git
   git_rev: {{ git_rev }}
-	
+
 build:
-  # A non-negative integer representing the build number of the package.
-  #  Unlike the build string, the build_number is inspected by conda.
-  #  Conda uses it to sort packages that have otherwise identical names
-  #  and versions to determine the latest one. This is important because
-  #  new builds that contain bug fixes for the way a package is built may be
-  #  added to a repository.
+    # A non-negative integer representing the build number of the package.
+    #  Unlike the build string, the build_number is inspected by conda.
+    #  Conda uses it to sort packages that have otherwise identical names
+    #  and versions to determine the latest one. This is important because
+    #  new builds that contain bug fixes for the way a package is built may be
+    #  added to a repository.
     number: {{ build }}
-
-
 
 requirements:
   build:
@@ -28,9 +26,8 @@ requirements:
     # system and include things such as revision control systems (Git, SVN) make
     # tools (GNU make, Autotool, CMake) and compilers (real cross, pseudo-cross,
     # or native when not cross-compiling), and any source pre-processors.   
-    - {{ compiler('cxx') }}    # [not win]
-    - {{ compiler('c') }}      # [not win]
-    - {{ compiler('clang') }}  # [win] 
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
     - cmake
     - make                     # [unix]
 outputs:
@@ -41,7 +38,7 @@ outputs:
         # target platform is not necessarily the same as the native build
         # platform
         - tudat-resources
-        - boost-cpp
+        - boost-cpp {{ boost_cpp }}
         - cspice-cmake
         - sofa-cmake
         - nlohmann_json
@@ -60,16 +57,15 @@ outputs:
     test:
       downstreams:
         - tudatpy
+        - tudatpy-base
 
 about:
-  home: http://tudat.tudelft.nl/
+  home: https://docs.tudat.space/
   license: BSD
   license_family: BSD
   summary: A C++ platform to perform astrodynamics and space research.
 
-
 extra:
   recipe-maintainers:
-    - ggarrett13
+    - geoffreygarrett
     - DominicDirkx
-

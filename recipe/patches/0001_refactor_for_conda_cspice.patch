@@ -1,0 +1,94 @@
+diff --git a/cmake_modules/FindCSPICE.cmake b/cmake_modules/FindCSPICE.cmake
+new file mode 100644
+index 000000000..35a67b232
+--- /dev/null
++++ b/cmake_modules/FindCSPICE.cmake
+@@ -0,0 +1,88 @@
++# FindCSPICE.cmake - Attempt to find CSPICE libraries and include paths
++
++# This module defines:
++#   CSPICE_FOUND - True if headers and requested libraries were found
++#   CSPICE_INCLUDE_DIRS - Where to find the headers
++#   CSPICE_LIBRARIES - List of libraries when using CSPICE
++#   CSPICE_VERSION - The version of the found CSPICE
++
++# Allow the user to specify whether to prefer static libraries
++option(_CSPICE_PREFER_STATIC_LIBS "Prefer static libraries for CSPICE" OFF)
++
++if(NOT TARGET CSPICE::cspice)
++    # Define the version of CSPICE you are looking for
++    set(CSPICE_VERSION "67.0.0")
++
++    # Determine the appropriate library suffixes based on OS and preference for static libraries
++    set(_CSPICE_LIB_SUFFIX "")
++    if(_CSPICE_PREFER_STATIC_LIBS)
++        set(_CSPICE_LIB_SUFFIX ".a") # Static library suffix
++    else()
++        if(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
++            set(_CSPICE_LIB_SUFFIX ".dylib")
++        elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
++            set(_CSPICE_LIB_SUFFIX ".so")
++        elseif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
++            set(_CSPICE_LIB_SUFFIX ".dll")
++        endif()
++    endif()
++
++    # Search for the include directory containing the 'cspice' folder
++    find_path(CSPICE_INCLUDE_DIR_PARENT
++            NAMES cspice/SpiceUsr.h
++            PATHS ${CMAKE_PREFIX_PATH} ${CMAKE_INSTALL_PREFIX}
++            PATH_SUFFIXES include
++            DOC "Parent directory where cspice/ can be found"
++    )
++
++    # If found, adjust CSPICE_INCLUDE_DIRS to the parent of the 'cspice' directory
++    if(CSPICE_INCLUDE_DIR_PARENT)
++        set(CSPICE_INCLUDE_DIRS "${CSPICE_INCLUDE_DIR_PARENT}")
++    endif()
++
++    # Search for the main CSPICE library
++    find_library(CSPICE_LIBRARY
++            NAMES cspice${_CSPICE_LIB_SUFFIX}
++            PATHS ${CMAKE_PREFIX_PATH} ${CMAKE_INSTALL_PREFIX}
++            PATH_SUFFIXES lib
++            DOC "Main CSPICE library"
++    )
++
++    # Search for the CSPICE support library
++    find_library(CSPICE_SUPPORT_LIBRARY
++            NAMES csupport${_CSPICE_LIB_SUFFIX}
++            PATHS ${CMAKE_PREFIX_PATH} ${CMAKE_INSTALL_PREFIX}
++            PATH_SUFFIXES lib
++            DOC "CSPICE support library"
++    )
++
++    # Check if the necessary components were found
++    include(FindPackageHandleStandardArgs)
++    find_package_handle_standard_args(CSPICE DEFAULT_MSG
++            CSPICE_LIBRARY CSPICE_INCLUDE_DIRS CSPICE_SUPPORT_LIBRARY
++    )
++
++    if(CSPICE_FOUND)
++        # Create imported targets for CSPICE
++        add_library(CSPICE::cspice UNKNOWN IMPORTED)
++        set_target_properties(CSPICE::cspice PROPERTIES
++                IMPORTED_LOCATION "${CSPICE_LIBRARY}"
++                INTERFACE_INCLUDE_DIRECTORIES "${CSPICE_INCLUDE_DIRS}"
++        )
++
++        add_library(CSPICE::csupport UNKNOWN IMPORTED)
++        set_target_properties(CSPICE::csupport PROPERTIES
++                IMPORTED_LOCATION "${CSPICE_SUPPORT_LIBRARY}"
++                INTERFACE_INCLUDE_DIRECTORIES "${CSPICE_INCLUDE_DIRS}"
++        )
++
++        # Aggregate the libraries to a variable for external usage
++        set(CSPICE_LIBRARIES CSPICE::cspice CSPICE::csupport)
++
++        message(STATUS "Found CSPICE: ${CSPICE_INCLUDE_DIRS} (found version ${CSPICE_VERSION})")
++    else()
++        message(STATUS "Could not find CSPICE")
++    endif()
++
++    mark_as_advanced(CSPICE_INCLUDE_DIRS CSPICE_LIBRARY CSPICE_SUPPORT_LIBRARY CSPICE_LIBRARIES CSPICE_VERSION)
++endif()

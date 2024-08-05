@@ -5,15 +5,17 @@ cd build
 :: backslashes in %BUILD_PREFIX% causes errors in CMake when parsing strings
 :: this line replaces backslashes with forward slashes for %BUILD_PREFIX%
 set "BUILD_PREFIX=%BUILD_PREFIX:\=/%"
+set BUILD_TESTS=1
 
 cmake ^
     -G "NMake Makefiles" ^
-    -DCMAKE_CXX_COMPILER=%BUILD_PREFIX%/Library/bin/clang++.exe ^
+    -DCMAKE_C_COMPILER=clang.exe ^
+    -DCMAKE_CXX_COMPILER=clang++.exe ^
     -DCMAKE_CXX_STANDARD=17 ^
     -DCMAKE_PREFIX_PATH=LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -DCMAKE_BUILD_TYPE=Release ^
-    -DTUDAT_BUILD_TESTS=0 ^
+    -DTUDAT_BUILD_TESTS=%BUILD_TESTS% ^
     -DTUDAT_BUILD_WITH_ESTIMATION_TOOLS=1 ^
     -DTUDAT_BUILD_STATIC_LIBRARY=1 ^
     -DTUDAT_BUILD_TUDAT_TUTORIALS=0 ^
@@ -30,9 +32,13 @@ cmake ^
 if errorlevel 1 exit 1
 
 cmake --build . --config Release --target install
+
 if errorlevel 1 exit 1
 
-ctest --verbose
+if %BUILD_TESTS%==1 (
+    ctest --verbose
+    if errorlevel 1 exit 1
+)
 if errorlevel 1 exit 1
 
 
