@@ -1,7 +1,7 @@
 {% set name = "tudat" %}
-  {% set version = "2.13.0.dev12" %}
+  {% set version = "2.13.0.dev13" %}
   {% set build = "0" %}
-  {% set git_rev = "v2.13.0.dev12" %}
+  {% set git_rev = "v2.13.0.dev13" %}
 
 package:
   name: {{ name }}
@@ -9,7 +9,7 @@ package:
 
 source:
   git_url: https://github.com/tudat-team/tudat.git
-  git_rev: 4dd92e297af593d64ad834eb188dfe024e52e924
+  git_rev: {{ git_rev }}
 
 build:
     # A non-negative integer representing the build number of the package.
@@ -39,7 +39,7 @@ outputs:
         # platform
         - tudat-resources
         - boost-cpp {{ boost_cpp }}
-        - cspice
+        - cspice-cmake
         - sofa-cmake
         - nlohmann_json
         - eigen
@@ -51,7 +51,7 @@ outputs:
         - {{ pin_compatible('libcurl', max_pin='x.x') }}
         - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
         - {{ pin_compatible('tudat-resources', max_pin='x.x') }}
-        - {{ pin_compatible('cspice', max_pin='x.x') }}
+        - {{ pin_compatible('cspice-cmake', max_pin='x.x') }}
         - {{ pin_compatible('sofa-cmake', max_pin='x.x') }}
         - {{ pin_compatible('nrlmsise-00', max_pin='x.x') }}
     test:
