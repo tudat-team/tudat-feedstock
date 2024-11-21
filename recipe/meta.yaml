@@ -1,5 +1,5 @@
 {% set name = "tudat" %}
-  {% set version = "2.13.0.dev44" %}
+  {% set version = "2.13.0.dev45" %}
   {% set build = "0" %}
   {% set git_rev = "v" + version %} # git_rev must point to the version tag. Hardcoded version can be replaced by assigning it using the version variable.This also solves formatting and indenantion issues while using the bumpversion command.
 
