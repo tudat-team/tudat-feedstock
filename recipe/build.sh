@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac OSX
-  ENABLE_TESTS=false
+  ENABLE_TESTS=true
   BUILD_ESTIMATION_TOOLS=true
   SKIP_JSON_TESTS=false
 else
-  ENABLE_TESTS=false
+  ENABLE_TESTS=true
   BUILD_ESTIMATION_TOOLS=true
   SKIP_JSON_TESTS=true
 fi
