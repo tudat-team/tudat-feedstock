@@ -1,7 +1,7 @@
 
 # tudat
 
-Repository the feedstock to build conda packages of the [tudat](https://github.com/tudat-team/tudat/) repository.
+Repository for the feedstock to build conda packages of the [tudat](https://github.com/tudat-team/tudat/) repository.
 
 Current release info
 ====================
