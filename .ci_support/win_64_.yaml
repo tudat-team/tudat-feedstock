@@ -12,5 +12,7 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '18'
+libcurl:
+- '8'
 target_platform:
 - win-64
