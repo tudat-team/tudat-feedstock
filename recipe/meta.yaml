@@ -1,5 +1,5 @@
 {% set name = "tudat" %}
-  {% set version = "2.13.0.dev62" %}
+  {% set version = "2.14.0" %}
   {% set build = "0" %}
   {% set git_rev = "v" + version %} # git_rev must point to the version tag. Hardcoded version can be replaced by assigning it using the version variable.This also solves formatting and indenantion issues while using the bumpversion command.
 
@@ -10,8 +10,8 @@ package:
 
 source:
   git_url: https://github.com/tudat-team/tudat.git
-  git_rev: {{ git_rev }}
-
+  git_rev: dc6967e8a8483c33d344f46c60602097fca36c76
+  
 build:
     # A non-negative integer representing the build number of the package.
     #  Unlike the build string, the build_number is inspected by conda.

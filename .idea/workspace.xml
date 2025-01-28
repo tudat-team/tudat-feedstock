@@ -28,7 +28,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a2da7e9-8225-4282-8e22-702eee07e124" name="Default Changelist" comment="git commit -m &quot;MNT: Re-rendered with conda-build 3.19.2, conda-smithy 3.7.3, and conda-forge-pinning 2020.06.16.21.09.39&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.bumpversion.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ci_support/linux_64_.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.ci_support/linux_64_.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ci_support/osx_64_.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.ci_support/osx_64_.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ci_support/osx_arm64_.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.ci_support/osx_arm64_.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ci_support/win_64_.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.ci_support/win_64_.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipe/conda_build_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/recipe/conda_build_config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recipe/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/recipe/meta.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,22 +77,29 @@
       </RecentBranches>
     </option>
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
   <component name="ProjectId" id="1dP3uYQOgR2KI9Ir5QCPgxTBI2D" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="cf.first.check.clang-format" value="false" />
-    <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "feature/develop__merge",
+    "last_opened_file_path": "/home/dominic/Tudat/feedstocks/tudat-feedstock",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -108,6 +120,7 @@
       <workItem from="1632150530080" duration="10000" />
       <workItem from="1642678361645" duration="433000" />
       <workItem from="1642680785385" duration="2320000" />
+      <workItem from="1738076978829" duration="150000" />
     </task>
     <task id="LOCAL-00001" summary="Changed to shared">
       <created>1592314755098</created>
@@ -195,7 +208,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed to shared" />
