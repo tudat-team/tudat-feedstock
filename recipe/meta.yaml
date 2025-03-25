@@ -55,6 +55,7 @@ outputs:
         - {{ pin_compatible('cspice-cmake', max_pin='x.x') }}
         - {{ pin_compatible('sofa-cmake', max_pin='x.x') }}
         - {{ pin_compatible('nrlmsise-00', max_pin='x.x') }}
+        - git
     test:
       downstreams:
         - tudatpy
