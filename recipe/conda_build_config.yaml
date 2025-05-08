@@ -3,7 +3,7 @@ channel_targets:
 channel_sources:
   - tudat-team, conda-forge, defaults
 boost_cpp:
-  - 1.85.0
+  - 1.86.0
 c_compiler:
   - clang
 c_compiler_version:
