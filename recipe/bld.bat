@@ -9,8 +9,8 @@ set BUILD_TESTS=0
 
 cmake ^
     -G "NMake Makefiles" ^
-    -DCMAKE_C_COMPILER=clang.exe ^
-    -DCMAKE_CXX_COMPILER=clang++.exe ^
+    -DCMAKE_C_COMPILER=cl.exe ^
+    -DCMAKE_CXX_COMPILER=cl.exe ^
     -DCMAKE_CXX_STANDARD=17 ^
     -DCMAKE_PREFIX_PATH=LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
