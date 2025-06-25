@@ -8,7 +8,6 @@ set "BUILD_PREFIX=%BUILD_PREFIX:\=/%"
 set BUILD_TESTS=0
 
 cmake ^
-    -G "NMake Makefiles" ^
     -DCMAKE_C_COMPILER=clang.exe ^
     -DCMAKE_CXX_COMPILER=clang++.exe ^
     -DCMAKE_CXX_STANDARD=17 ^
