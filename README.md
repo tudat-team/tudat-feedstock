@@ -1,6 +1,4 @@
 
 # tudat
 
-Repository for the feedstock to build conda packages of the [tudat](https://github.com/tudat-team/tudat/) repository.
-
-This repository is no longer used or maintained as of tudatpy v1.0 (https://docs.tudat.space/en/latest/user-guide/project-updates/migration-guide.html) when the tudat and tudatpy repositories were merged into a single repository.
+This repository is archived, use https://github.com/tudat-team/tudatpy-feedstock instead (tudatpy now contains the C++ source and Python exposure)
